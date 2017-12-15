@@ -1,0 +1,37 @@
+<h1>This is the Results EJS page.</h1>
+
+<!--
+  data object is passed over from app.js <%= data %> will return whole object
+  Look at http://www.omdbapi.com/?s=starwars&apikey=thewdb& to see what key pairs
+  {
+      Search: [
+          {
+          Title: "40 Years: StarWars & ILM",
+          Year: "2016",
+          imdbID: "tt5320598",
+          Type: "movie",
+          Poster: "N/A"
+          },
+          {
+          Title: "The StarWars Adventures",
+          Year: "2016–",
+          imdbID: "tt5814352",
+          Type: "series",
+          Poster: "N/A"
+          },
+          {
+          Title: "The StarWars Adventures: Project Blackwing",
+          Year: "2016",
+          imdbID: "tt5814452",
+          Type: "series",
+          Poster: "N/A"
+          }
+      ],
+      totalResults: "3",
+      Response: "True"
+  }
+-->
+
+<% data['Search'].forEach(function(movie){ %>
+  <li><%= movie['Title'] %></li>
+<% }) %>
